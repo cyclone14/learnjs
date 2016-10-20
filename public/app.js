@@ -34,12 +34,13 @@ learnjs.template = function(name) {
 
 learnjs.showView = function(hash) {
     var routes = {
-	'#problem': learnjs.problemView
+	    '#problem': learnjs.problemView,
+        '': learnjs.landingView
     };
     var hashParts = hash.split('-');
     var viewFn = routes[hashParts[0]];
     if (viewFn) {
-	$('.view-container').empty().append(viewFn(hashParts[1]));
+	    $('.view-container').empty().append(viewFn(hashParts[1]));
     }
 }
 
@@ -74,6 +75,10 @@ learnjs.applyObject = function(obj, elem) {
 	elem.find('[data-name="' + key + '"]').text(obj[key]);
     }
 };
+
+learnjs.landingView = function() {
+    return learnjs.template('landing-view');
+}
 
 learnjs.problems = [
     {
