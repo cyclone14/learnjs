@@ -98,11 +98,23 @@ learnjs.triggerEvent = function(name, args) {
 
 learnjs.problems = [
     {
-	description: "What is truth?",
-	code: "function problem() { return __; }"
+        description: "What is truth?",
+        code: "function problem() { return __; }"
     },
     {
-	description: "Simple Math",
-	code: "function problem() { return 42 === 6 * __; }"
+        description: "Simple Math",
+        code: "function problem() { return 42 === 6 * __; }"
+    },
+    {
+        description: "Another simple test",
+        code: "function problem() { return 1952 === 61 * __; }"
+    },
+    {
+        description: "Left shift test",
+        code: "function problem() { return 1952 === 61 << __; }"
+    },
+    {
+        description: "Right shift test",
+        code: "function problem() { return 61 === 1953 >> __; }"
     }
 ];
