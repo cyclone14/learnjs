@@ -1,4 +1,7 @@
 'use strict';
+function googleSignIn() {
+    console.log(arguments);
+}
 var learnjs = {};
 learnjs.problemView = function(data) {
     var problemNumber = parseInt(data, 10);
