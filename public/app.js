@@ -198,7 +198,7 @@ learnjs.saveAnswer = function (problemId, answer) {
             return learnjs.saveAnswer(problemId, answer);
         })
     });
-}
+};
 
 learnjs.problems = [
     {
