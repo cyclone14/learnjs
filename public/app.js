@@ -64,19 +64,19 @@ learnjs.problemView = function(data) {
     var resultFlash = view.find('.result');
 
     function checkAnswer() {
-	var answer = view.find('.answer').val();
-	var test = problemData.code.replace('__', answer) + '; problem();';
-	return eval(test);
+        var answer = view.find('.answer').val();
+        var test = problemData.code.replace('__', answer) + '; problem();';
+        return eval(test);
     }
 
     function checkAnswerClick() {
-	if (checkAnswer()) {
-	    var correctFlash = learnjs.buildCorrectFlash(problemNumber);
-	    learnjs.flashElement(resultFlash, correctFlash);
-	} else {
-	    learnjs.flashElement(resultFlash, 'Incorrect!');
-	}
-	return false;
+        if (checkAnswer()) {
+            var correctFlash = learnjs.buildCorrectFlash(problemNumber);
+            learnjs.flashElement(resultFlash, correctFlash);
+        } else {
+            learnjs.flashElement(resultFlash, 'Incorrect!');
+        }
+	    return false;
     }
 
     view.find('.check-btn').click(checkAnswerClick);
@@ -181,7 +181,7 @@ learnjs.sendDbRequest = function(req, retry) {
     });
     req.send();
     return promise;
-}
+};
 
 learnjs.saveAnswer = function (problemId, answer) {
     return learnjs.identity.then(function (identity) {
